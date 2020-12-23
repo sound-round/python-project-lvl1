@@ -1,12 +1,13 @@
 #!usr/bin/env python
 
+import prompt
 import random
 from brain_games import cli
 from brain_games.scripts import brain_games
 
 def main():
 
-    def get_right_answer(number):
+    def get_correct_answer(number):
         if number % 2 == 0:
             return 'yes'
         return 'no'
@@ -18,17 +19,17 @@ def main():
     counter = 0
     while counter < 3:
         number = random.randint(1, 100)
-        right_answer = get_right_answer(number)
+        correct_answer = get_correct_answer(number)
         print('Question: {}'.format(number))
-        user_answer = str(input('Your answer: '))
+        user_answer = prompt.string('Your answer: ')
 
-        if user_answer == right_answer:
+        if user_answer == correct_answer:
             print('Correct!')
             counter += 1
         else:
-            print("'{}' is wrong answer ;(. Correct answer was '{}'".format(user_answer, right_answer))
+            print("'{}' is wrong answer ;(. Correct answer was '{}'".format(user_answer, correct_answer))
             counter = 0
-    print('Congratulations, {}!'.format(brain_games.name)
+#    print('Congratulations, {}!'.format(cli.name)
 
 if __name__ == '__main__':
     main()
