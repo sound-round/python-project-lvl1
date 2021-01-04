@@ -3,15 +3,18 @@ import random
 
 
 def greeting():
+    """Function greets player, asks his name and returns it"""
     print('Welcome to The Brain Games!')
     name = prompt.string('May I have your name? ')
     print('Hello, {}!'.format(name))
     return name
 
 
-def brain_even():
+def run_brain_even():
+    """Function runs brain-even games"""
 
     def get_correct_answer(number):
+        """Function defines correct answer for random number"""
         if number % 2 == 0:
             return 'yes'
         return 'no'
