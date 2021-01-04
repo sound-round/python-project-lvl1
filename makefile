@@ -7,6 +7,9 @@ brain-games:
 brain-even:
 	poetry run brain-even
 
+force-package-install:
+	pip install --force-reinstall --user dist/*.whl
+
 package-install:
 	pip install --user dist/*.whl
 
