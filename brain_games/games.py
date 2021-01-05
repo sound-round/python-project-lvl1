@@ -1,9 +1,11 @@
 import prompt
 import random
+import math
 
 
 def greeting():
     """Function greets player, asks his name and returns it."""
+
     print('Welcome to The Brain Games!')
     name = prompt.string('May I have your name? ')
     print('Hello, {}!'.format(name))
@@ -48,6 +50,7 @@ def run_brain_even():
 
     def randomiser():
         """Function returns a random number from 1 to 100."""
+
         return random.randint(1, 100)
 
     string = 'Answer "yes" if the number is even, otherwise answer "no".'
@@ -64,10 +67,33 @@ def run_brain_calc():
 
     def randomiser():
         """Function returns an expression"""
+
         number_1 = random.randint(1, 100)
         number_2 = random.randint(1, 100)
         sign = random.choice(['+', '-', '*'])
         return '{} {} {}'.format(number_1, sign, number_2)
 
     string = 'What is the result of the expression?'
+    run_engine(get_correct_answer, randomiser, string)
+
+
+def run_brain_gcd():
+    """Function defines conditions of the brain-gcd game."""
+
+    def get_correct_answer(question):
+        """Function defines greatest common divisor for two numbers"""
+
+        a, b = question.split(' ')  # split a string into numbers
+        number_1 = int(a)
+        number_2 = int(b)
+        return str(math.gcd(number_1, number_2))
+
+    def randomiser():
+        """Function returns string with two random numbers"""
+
+        number_1 = random.randint(1, 100)
+        number_2 = random.randint(1, 100)
+        return '{} {}'.format(number_1, number_2)
+
+    string = 'Find the greatest common divisor of given numbers.'
     run_engine(get_correct_answer, randomiser, string)
