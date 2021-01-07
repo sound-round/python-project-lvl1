@@ -83,7 +83,7 @@ def run_brain_gcd():
     def get_correct_answer(question):
         """Function defines greatest common divisor for two numbers"""
 
-        a, b = question.split(' ')  # split a string into numbers
+        a, b = question.split(' ')  # splits a string into numbers.
         number_1 = int(a)
         number_2 = int(b)
         return str(math.gcd(number_1, number_2))
@@ -96,4 +96,48 @@ def run_brain_gcd():
         return '{} {}'.format(number_1, number_2)
 
     string = 'Find the greatest common divisor of given numbers.'
+    run_engine(get_correct_answer, randomiser, string)
+
+
+def run_brain_progression():
+    """Function defines conditions of the brain-progression game."""
+
+    def get_correct_answer(question):
+        """Function defines the correct_answer."""
+
+        progression_list = question.split(' ')
+        index_number = progression_list.index('..')  # index of the hidden element.
+        if index_number == 0:  # for the case if the first element was hidden.
+            correct_answer = int(int(progression_list[1])
+                                 - (int(progression_list[2])
+                                 - int(progression_list[1])))
+        elif index_number == len(progression_list) - 1:  # for the case if the last element was hidden.
+            correct_answer = int(int(progression_list[-2])
+                                 - int(progression_list[-3])
+                                 + int(progression_list[-2]))
+        else:
+            pr_index = index_number - 1  # index of the previous element.
+            nx_index = index_number + 1  # index of the next element.
+            correct_answer = int((int(progression_list[nx_index]) -
+                                  int(progression_list[pr_index])) / 2
+                                 + int(progression_list[pr_index]))
+        return str(correct_answer)
+
+    def randomiser():
+        """Function returns a progression with a hidden element in string."""
+
+        first_number = random.randint(1, 20)  # defines the first number of a progression.
+        step = random.randint(1, 5)  # defines a step of a progression.
+        progression_list = [str(first_number)]
+        limit = random.randint(5, 10)  # defines length of a progression.
+        for i in range(1, limit):
+            number = first_number + step * i
+            progression_list.append(str(number))
+        index_hidden_element = random.randint(0, len(progression_list) - 1)
+        progression_list.pop(index_hidden_element)
+        progression_list.insert(index_hidden_element, '..')
+        progression_string = ' '.join(progression_list)
+        return progression_string
+
+    string = 'What number is missing in the progression?'
     run_engine(get_correct_answer, randomiser, string)
