@@ -157,7 +157,8 @@ def run_brain_prime():
 
         range_list = list(range(2, 101))
         # excludes the number from the range
-        range_list.pop(range_list.index(number))
+        if number != 1:
+            range_list.pop(range_list.index(number))
         for divisor in range_list:
             if number % divisor == 0:
                 correct_answer = 'no'
