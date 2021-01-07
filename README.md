@@ -12,3 +12,5 @@ Demo brain-calc on asciinema: https://asciinema.org/a/NGH12lpN93QQ0oLfWFRPmMW4y
 Demo brain-gcd on asciinema: https://asciinema.org/a/couyMwjHilY3RDKPKD32ADXR4
 
 Demo brain-progression on asciinema: https://asciinema.org/a/6H89NYIKusnSUg8SqL7AhS0fk
+
+Demo brain-prime on asciinema: https://asciinema.org/a/JnWcVAfdaU0KBHP9b9E4dRDrN
