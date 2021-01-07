@@ -106,12 +106,15 @@ def run_brain_progression():
         """Function defines the correct_answer."""
 
         progression_list = question.split(' ')
-        index_number = progression_list.index('..')  # index of the hidden element.
-        if index_number == 0:  # for the case if the first element was hidden.
+        # index of the hidden element.
+        index_number = progression_list.index('..')
+        # for the case if the first element was hidden.
+        if index_number == 0:
             correct_answer = int(int(progression_list[1])
                                  - (int(progression_list[2])
                                  - int(progression_list[1])))
-        elif index_number == len(progression_list) - 1:  # for the case if the last element was hidden.
+        # for the case if the last element was hidden.
+        elif index_number == len(progression_list) - 1:
             correct_answer = int(int(progression_list[-2])
                                  - int(progression_list[-3])
                                  + int(progression_list[-2]))
@@ -126,10 +129,13 @@ def run_brain_progression():
     def randomiser():
         """Function returns a progression with a hidden element in string."""
 
-        first_number = random.randint(1, 20)  # defines the first number of a progression.
-        step = random.randint(1, 5)  # defines a step of a progression.
+        # defines the first number of a progression.
+        first_number = random.randint(1, 20)
+        # defines a step of a progression.
+        step = random.randint(1, 5)
         progression_list = [str(first_number)]
-        limit = random.randint(5, 10)  # defines length of a progression.
+        # defines length of a progression.
+        limit = random.randint(5, 10)
         for i in range(1, limit):
             number = first_number + step * i
             progression_list.append(str(number))
@@ -140,4 +146,30 @@ def run_brain_progression():
         return progression_string
 
     string = 'What number is missing in the progression?'
+    run_engine(get_correct_answer, randomiser, string)
+
+
+def run_brain_prime():
+    """Function defines conditions of the brain-prime game."""
+
+    def get_correct_answer(number):
+        """Function defines correct answer for a random number."""
+
+        range_list = list(range(2, 101))
+        # excludes the number from the range
+        range_list.pop(range_list.index(number))
+        for divisor in range_list:
+            if number % divisor == 0:
+                correct_answer = 'no'
+                return correct_answer
+
+        correct_answer = 'yes'
+        return correct_answer
+
+    def randomiser():
+        """Function returns a random number from 1 to 100."""
+
+        return random.randint(1, 100)
+
+    string = 'Answer "yes" if given number is prime. Otherwise answer "no".'
     run_engine(get_correct_answer, randomiser, string)
