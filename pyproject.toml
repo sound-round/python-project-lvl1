@@ -1,11 +1,23 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = ""
+description = '"Mind Games" — a set of five console games built on the principle of popular mobile applications for brain pumping. 
+Each game asks questions that need to be answered correctly. After three correct answers, the game is considered completed. 
+Incorrect answers end the game and offer to go through it again.'
+classifiers = [
+        'Development Status :: Beta',
+        'Environment :: Console',
+        'Intended Audience :: End Users',
+        'License :: OSI Approved :: Python Software Foundation License',
+        'Operating System :: Ubuntu',
+        'Programming Language :: Python',
+        'Topic :: Communications :: Email',
+]
 authors = ["denis <yudaev1@gmail.com>"]
 packages = [
   { include = "brain_games" },
 ]
+repository = "https://github.com/sound-round/python-project-lvl1.git"
 
 [tool.poetry.dependencies]
 python = "^3.8"
