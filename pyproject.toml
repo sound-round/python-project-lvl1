@@ -1,9 +1,7 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = "Mind Games — a set of five console games built on the principle of popular mobile applications for brain pumping. 
-Each game asks questions that need to be answered correctly. After three correct answers, the game is considered completed. 
-Incorrect answers end the game and offer to go through it again."
+description = "Mind Games — a set of five console games built on the principle of popular mobile applications for brain pumping."
 classifiers = [
         "Development Status :: Beta",
         "Environment :: Console",
