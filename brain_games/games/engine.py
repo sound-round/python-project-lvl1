@@ -1,6 +1,4 @@
 import prompt
-import random
-import math
 
 
 def greeting():
@@ -12,7 +10,7 @@ def greeting():
     return name
 
 
-def run_engine(function, randomiser, string):
+def run_engine(function, randomizer, string):
     """Function runs a game.
     The first argument is a function, defining a correct answer.
     The second argument is a function, returning a question.
@@ -22,7 +20,7 @@ def run_engine(function, randomiser, string):
     print(string)
     counter = 0
     while counter < 3:
-        question = randomiser()
+        question = randomizer()
         correct_answer = function(question)
         print('Question: {}'.format(question))
         user_answer = prompt.string('Your answer: ')
@@ -36,141 +34,3 @@ def run_engine(function, randomiser, string):
                                                   correct_answer, name))
             counter = 0
     print('Congratulations, {}!'.format(name))
-
-
-def run_brain_even():
-    """Function defines conditions of the brain-even game."""
-
-    def get_correct_answer(number):
-        """Function defines correct answer for a random number."""
-
-        if number % 2 == 0:
-            return 'yes'
-        return 'no'
-
-    def randomiser():
-        """Function returns a random number from 1 to 100."""
-
-        return random.randint(1, 100)
-
-    string = 'Answer "yes" if the number is even, otherwise answer "no".'
-    run_engine(get_correct_answer, randomiser, string)
-
-
-def run_brain_calc():
-    """Function defines conditions of the brain-calc game."""
-
-    def get_correct_answer(question):
-        """Function defines correct answer for an expression"""
-
-        return str(eval(question))
-
-    def randomiser():
-        """Function returns an expression"""
-
-        number_1 = random.randint(1, 100)
-        number_2 = random.randint(1, 100)
-        sign = random.choice(['+', '-', '*'])
-        return '{} {} {}'.format(number_1, sign, number_2)
-
-    string = 'What is the result of the expression?'
-    run_engine(get_correct_answer, randomiser, string)
-
-
-def run_brain_gcd():
-    """Function defines conditions of the brain-gcd game."""
-
-    def get_correct_answer(question):
-        """Function defines greatest common divisor for two numbers"""
-
-        a, b = question.split(' ')  # splits a string into numbers.
-        number_1 = int(a)
-        number_2 = int(b)
-        return str(math.gcd(number_1, number_2))
-
-    def randomiser():
-        """Function returns string with two random numbers"""
-
-        number_1 = random.randint(1, 100)
-        number_2 = random.randint(1, 100)
-        return '{} {}'.format(number_1, number_2)
-
-    string = 'Find the greatest common divisor of given numbers.'
-    run_engine(get_correct_answer, randomiser, string)
-
-
-def run_brain_progression():
-    """Function defines conditions of the brain-progression game."""
-
-    def get_correct_answer(question):
-        """Function defines the correct_answer."""
-
-        progression_list = question.split(' ')
-        # index of the hidden element.
-        index_number = progression_list.index('..')
-        # for the case if the first element was hidden.
-        if index_number == 0:
-            correct_answer = int(int(progression_list[1])
-                                 - (int(progression_list[2])
-                                 - int(progression_list[1])))
-        # for the case if the last element was hidden.
-        elif index_number == len(progression_list) - 1:
-            correct_answer = int(int(progression_list[-2])
-                                 - int(progression_list[-3])
-                                 + int(progression_list[-2]))
-        else:
-            pr_index = index_number - 1  # index of the previous element.
-            nx_index = index_number + 1  # index of the next element.
-            correct_answer = int((int(progression_list[nx_index]) -
-                                  int(progression_list[pr_index])) / 2
-                                 + int(progression_list[pr_index]))
-        return str(correct_answer)
-
-    def randomiser():
-        """Function returns a progression with a hidden element in string."""
-
-        # defines the first number of a progression.
-        first_number = random.randint(1, 20)
-        # defines a step of a progression.
-        step = random.randint(1, 5)
-        progression_list = [str(first_number)]
-        # defines length of a progression.
-        limit = random.randint(5, 10)
-        for i in range(1, limit):
-            number = first_number + step * i
-            progression_list.append(str(number))
-        index_hidden_element = random.randint(0, len(progression_list) - 1)
-        progression_list.pop(index_hidden_element)
-        progression_list.insert(index_hidden_element, '..')
-        progression_string = ' '.join(progression_list)
-        return progression_string
-
-    string = 'What number is missing in the progression?'
-    run_engine(get_correct_answer, randomiser, string)
-
-
-def run_brain_prime():
-    """Function defines conditions of the brain-prime game."""
-
-    def get_correct_answer(number):
-        """Function defines correct answer for a random number."""
-
-        range_list = list(range(2, 101))
-        # excludes the number from the range
-        if number != 1:
-            range_list.pop(range_list.index(number))
-        for divisor in range_list:
-            if number % divisor == 0:
-                correct_answer = 'no'
-                return correct_answer
-
-        correct_answer = 'yes'
-        return correct_answer
-
-    def randomiser():
-        """Function returns a random number from 1 to 100."""
-
-        return random.randint(1, 100)
-
-    string = 'Answer "yes" if given number is prime. Otherwise answer "no".'
-    run_engine(get_correct_answer, randomiser, string)
