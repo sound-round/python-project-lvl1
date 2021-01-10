@@ -22,4 +22,5 @@ def run_brain_gcd():
         return str(math.gcd(number_1, number_2))
 
     game_task = 'Find the greatest common divisor of given numbers.'
-    engine.run_engine(find_greatest_common_divisor, randomize_numbers, game_task)
+    engine.run_engine(find_greatest_common_divisor,
+                      randomize_numbers, game_task)

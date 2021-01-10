@@ -11,7 +11,8 @@ def run_brain_calc():
         random_number_1 = random.randint(1, 100)
         random_number_2 = random.randint(1, 100)
         random_operator = random.choice(['+', '-', '*'])
-        return '{} {} {}'.format(random_number_1, random_operator, random_number_2)
+        return '{} {} {}'.format(random_number_1,
+                                 random_operator, random_number_2)
 
     def get_correct_answer(generated_question):
         """Function defines correct answer for an expression"""
