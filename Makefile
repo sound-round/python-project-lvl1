@@ -1,12 +1,6 @@
 install:
 	poetry install
 
-brain-games:
-	poetry run brain-games
-
-brain-even:
-	poetry run brain-even
-
 force-package-install:
 	pip install --force-reinstall --user dist/*.whl
 
