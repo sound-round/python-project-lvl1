@@ -2,15 +2,6 @@
 name = "hexlet-code"
 version = "0.1.0"
 description = "Mind Games — a set of five console games built on the principle of popular mobile applications for brain pumping."
-classifiers = [
-        "Development Status :: Beta",
-        "Environment :: Console",
-        "Intended Audience :: End Users",
-        "License :: OSI Approved :: Python Software Foundation License",
-        "Operating System :: Ubuntu",
-        "Programming Language :: Python",
-        "Topic :: Communications :: Email",
-]
 authors = ["denis <yudaev1@gmail.com>"]
 packages = [
   { include = "brain_games" },
