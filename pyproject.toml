@@ -8,7 +8,13 @@ packages = [
 ]
 repository = "https://github.com/sound-round/python-project-lvl1.git"
 readme = "README.md"
-keywords = "hexlet, games, project, education, python"
+keywords = [
+    "Python",
+    "Project",
+    "Education",
+    "Games",
+    "Hexlet"
+]
 license = "MIT"
 
 [tool.poetry.dependencies]
