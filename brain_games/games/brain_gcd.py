@@ -1,6 +1,5 @@
 import random
 import math
-from brain_games import engine
 
 
 TASK = 'Find the greatest common divisor of given numbers.'
@@ -14,4 +13,3 @@ def run():
     question = '{} {}'.format(random_number_1, random_number_2)
     correct_answer = str(math.gcd(random_number_1, random_number_2))
     return question, correct_answer
-
