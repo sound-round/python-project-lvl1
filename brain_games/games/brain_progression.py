@@ -2,7 +2,7 @@ import random
 from brain_games.games import engine
 
 
-def run_brain_progression():
+def run():
     """Function defines conditions of the brain-progression game."""
 
     def randomize_progression():

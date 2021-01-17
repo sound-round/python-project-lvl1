@@ -3,7 +3,7 @@ import math
 from brain_games.games import engine
 
 
-def run_brain_gcd():
+def run():
     """Function defines conditions of the brain-gcd game."""
 
     def randomize_numbers():

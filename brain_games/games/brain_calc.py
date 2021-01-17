@@ -2,7 +2,7 @@ import random
 from brain_games.games import engine
 
 
-def run_brain_calc():
+def run():
     """Function defines conditions of the brain-calc game."""
 
     def randomize_expression():

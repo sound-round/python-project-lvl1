@@ -2,7 +2,7 @@ import random
 from brain_games.games import engine
 
 
-def run_brain_even():
+def run():
     """Function defines conditions of the brain-even game."""
 
     def number_randomizer():
