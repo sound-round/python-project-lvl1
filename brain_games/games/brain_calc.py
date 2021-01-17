@@ -19,5 +19,5 @@ def run():
 
         return str(eval(generated_question))
 
-    game_task = 'What is the result of the expression?'
-    engine.run_engine(get_correct_answer, randomize_expression, game_task)
+    GAME_TASK = 'What is the result of the expression?'
+    engine.run(get_correct_answer, randomize_expression, GAME_TASK)

@@ -48,5 +48,5 @@ def run():
                                  + int(progression_list[previous_index]))
         return str(hidden_element)
 
-    game_task = 'What number is missing in the progression?'
-    engine.run_engine(find_hidden_element, randomize_progression, game_task)
+    GAME_TASK = 'What number is missing in the progression?'
+    engine.run(find_hidden_element, randomize_progression, GAME_TASK)

@@ -5,7 +5,7 @@ from brain_games import engine
 def run():
     """Function defines conditions of the brain-even game."""
 
-    def number_randomizer():
+    def randomize_number():
         """Function returns a random number from 1 to 100."""
 
         return random.randint(1, 100)
@@ -17,5 +17,5 @@ def run():
             return 'yes'
         return 'no'
 
-    game_task = 'Answer "yes" if the number is even, otherwise answer "no".'
-    engine.run_engine(is_even, number_randomizer, game_task)
+    GAME_TASK = 'Answer "yes" if the number is even, otherwise answer "no".'
+    engine.run(is_even, randomize_number, GAME_TASK)

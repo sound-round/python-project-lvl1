@@ -21,6 +21,6 @@ def run():
         number_2 = int(b)
         return str(math.gcd(number_1, number_2))
 
-    game_task = 'Find the greatest common divisor of given numbers.'
-    engine.run_engine(find_greatest_common_divisor,
-                      randomize_numbers, game_task)
+    GAME_TASK = 'Find the greatest common divisor of given numbers.'
+    engine.run(find_greatest_common_divisor,
+               randomize_numbers, GAME_TASK)
