@@ -3,6 +3,9 @@ import math
 from brain_games import engine
 
 
+GAME_TASK = 'Find the greatest common divisor of given numbers.'
+
+
 def run():
     """Function defines conditions of the brain-gcd game."""
 
@@ -21,6 +24,5 @@ def run():
         number_2 = int(b)
         return str(math.gcd(number_1, number_2))
 
-    GAME_TASK = 'Find the greatest common divisor of given numbers.'
     engine.run(find_greatest_common_divisor,
                randomize_numbers, GAME_TASK)

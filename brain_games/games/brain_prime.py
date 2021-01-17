@@ -2,6 +2,9 @@ import random
 from brain_games import engine
 
 
+GAME_TASK = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+
+
 def run():
     """Function defines conditions of the brain-prime game."""
 
@@ -25,5 +28,4 @@ def run():
         correct_answer = 'yes'
         return correct_answer
 
-    GAME_TASK = 'Answer "yes" if given number is prime. Otherwise answer "no".'
     engine.run(is_prime, randomize_number, GAME_TASK)

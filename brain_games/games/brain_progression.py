@@ -2,6 +2,9 @@ import random
 from brain_games import engine
 
 
+GAME_TASK = 'What number is missing in the progression?'
+
+
 def run():
     """Function defines conditions of the brain-progression game."""
 
@@ -48,5 +51,4 @@ def run():
                                  + int(progression_list[previous_index]))
         return str(hidden_element)
 
-    GAME_TASK = 'What number is missing in the progression?'
     engine.run(find_hidden_element, randomize_progression, GAME_TASK)

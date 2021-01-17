@@ -2,6 +2,9 @@ import random
 from brain_games import engine
 
 
+GAME_TASK = 'What is the result of the expression?'
+
+
 def run():
     """Function defines conditions of the brain-calc game."""
 
@@ -19,5 +22,4 @@ def run():
 
         return str(eval(generated_question))
 
-    GAME_TASK = 'What is the result of the expression?'
     engine.run(get_correct_answer, randomize_expression, GAME_TASK)

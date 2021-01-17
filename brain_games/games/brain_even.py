@@ -1,6 +1,8 @@
 import random
 from brain_games import engine
 
+GAME_TASK = 'Answer "yes" if the number is even, otherwise answer "no".'
+
 
 def run():
     """Function defines conditions of the brain-even game."""
@@ -17,5 +19,4 @@ def run():
             return 'yes'
         return 'no'
 
-    GAME_TASK = 'Answer "yes" if the number is even, otherwise answer "no".'
     engine.run(is_even, randomize_number, GAME_TASK)
