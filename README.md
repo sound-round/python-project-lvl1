@@ -24,19 +24,19 @@ In this game you have to answer if the number is prime.
 
 ## Visuals
 Demo brain-even on asciinema: 
-[![asciicast](https://asciinema.org/a/nNGa8Fit9oOQkX4a2XYhps0U2.svg)](https://asciinema.org/a/nNGa8Fit9oOQkX4a2XYhps0U2)
+[![asciicast](https://asciinema.org/a/l3xUbQ27163foD9fpM5J5Wayq.svg)](https://asciinema.org/a/l3xUbQ27163foD9fpM5J5Wayq)
 
 Demo brain-calc on asciinema:
-[![asciicast](https://asciinema.org/a/NGH12lpN93QQ0oLfWFRPmMW4y.svg)](https://asciinema.org/a/NGH12lpN93QQ0oLfWFRPmMW4y)
+[![asciicast](https://asciinema.org/a/jSruu0Brays5gPF7bLhr65Sia.svg)](https://asciinema.org/a/jSruu0Brays5gPF7bLhr65Sia)
 
 Demo brain-gcd on asciinema: 
-[![asciicast](https://asciinema.org/a/couyMwjHilY3RDKPKD32ADXR4.svg)](https://asciinema.org/a/couyMwjHilY3RDKPKD32ADXR4)
+[![asciicast](https://asciinema.org/a/B9Wzg6N3scQrpbmJb5D1cM2Qd.svg)](https://asciinema.org/a/B9Wzg6N3scQrpbmJb5D1cM2Qd)
 
 Demo brain-progression on asciinema:
-[![asciicast](https://asciinema.org/a/6H89NYIKusnSUg8SqL7AhS0fk.svg)](https://asciinema.org/a/6H89NYIKusnSUg8SqL7AhS0fk)
+[![asciicast](https://asciinema.org/a/3aaTBBfNZZ27ywCP6P3PChxzO.svg)](https://asciinema.org/a/3aaTBBfNZZ27ywCP6P3PChxzO)
 
 Demo brain-prime on asciinema: 
-[![asciicast](https://asciinema.org/a/JnWcVAfdaU0KBHP9b9E4dRDrN.svg)](https://asciinema.org/a/JnWcVAfdaU0KBHP9b9E4dRDrN)
+[![asciicast](https://asciinema.org/a/6wH9phK3dADwnM6bO73CEbEMz.svg)](https://asciinema.org/a/6wH9phK3dADwnM6bO73CEbEMz)
 
 ## Commands
 Use the following commands to play Brain Games:
@@ -57,5 +57,6 @@ This project was built using these tools:
 | Tool                                                                        | Description                                             |
 |-----------------------------------------------------------------------------|---------------------------------------------------------|
 | [poetry](https://poetry.eustace.io/)                                        | "Python dependency management and packaging made easy"  |
-| [Py.Test](https://pytest.org)                                               | "A mature full-featured Python testing tool"            |
 | [flake8](https://flake8.pycqa.org/en/latest/)                               | "The tool for style guide enforcement"                  |
+| [code climate](https://codeclimate.com/)                                    | "Actionable metrics for engineering"                    |
+| [github actions](https://github.com/features/actions)                       | "Automatization software workflows with  CI/CD"          |
