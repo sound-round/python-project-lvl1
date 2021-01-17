@@ -11,9 +11,7 @@ def run(get_correct_answer, randomize_question, GAME_TASK):
     player_name = prompt.string('May I have your name? ')
     print('Hello, {}!'.format(player_name))
     print(GAME_TASK)
-    wins_counter = 0
-    WINS_LIMIT = 3
-    while wins_counter < WINS_LIMIT:
+    for win in range(0, 3):
         generated_question = randomize_question()
         correct_answer = get_correct_answer(generated_question)
         print('Question: {}'.format(generated_question))
@@ -21,12 +19,12 @@ def run(get_correct_answer, randomize_question, GAME_TASK):
 
         if user_answer == correct_answer:
             print('Correct!')
-            wins_counter += 1
             continue
 
         print("'{}' is wrong answer ;(. Correct answer was '{}'."
               "\nLet's try again, {}!".format(user_answer,
                                               correct_answer, player_name))
-        wins_counter = 0
+        break
 
-    print('Congratulations, {}!'.format(player_name))
+    if user_answer == correct_answer:
+        print('Congratulations, {}!'.format(player_name))
