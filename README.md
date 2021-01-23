@@ -1,5 +1,13 @@
 # Brain Games
 
+## Badges
+### Hexlet tests and linter status:
+![Actions Status](/workflows/hexlet-check/badge.svg)
+
+<a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
+
+[![Github Actions Status](https://github.com/sound-round/python-project-lvl1/workflows/linter-flake8/badge.svg)](https://github.com/sound-round/python-project-lvl1/actions)
+
 ## Description
 Brain Games — a set of five console games built on the principle of popular mobile applications for brain pumping.
 
@@ -13,14 +21,6 @@ In this game you have to find the greatest common divisor for two numbers.
 In this game you have to find the hidden element of ariphmetical progression.
 ### Brain-prime 
 In this game you have to answer if the number is prime.
-
-## Badges
-### Hexlet tests and linter status:
-![Actions Status](/workflows/hexlet-check/badge.svg)
-
-<a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
-
-[![Github Actions Status](https://github.com/sound-round/python-project-lvl1/workflows/linter-flake8/badge.svg)](https://github.com/sound-round/python-project-lvl1/actions)
 
 ## Visuals
 Demo brain-even on asciinema: 
@@ -38,14 +38,26 @@ Demo brain-progression on asciinema:
 Demo brain-prime on asciinema: 
 [![asciicast](https://asciinema.org/a/6wH9phK3dADwnM6bO73CEbEMz.svg)](https://asciinema.org/a/6wH9phK3dADwnM6bO73CEbEMz)
 
+## Install
+Use the following command to install Brain Games:
+```
+pip install --user dist/*.whl
+```
+
+## Local testing
+Use the following command to test the package:
+```
+poetry run flake8 brain_games
+```
+
 ## Commands
 Use the following commands to play Brain Games:
 ```
-$brain-even  
-$brain-calc  
-$brain-gcd   
-$brain-progression  
-$brain-prime 
+$ brain-even  
+$ brain-calc  
+$ brain-gcd   
+$ brain-progression  
+$ brain-prime 
 ```
 
 ## Support
