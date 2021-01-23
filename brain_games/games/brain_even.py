@@ -4,11 +4,24 @@ import random
 DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
+def get_question():
+    question = random.randint(1, 100)
+    return question
+
+
+def get_correct_answer(predicate):
+    return 'yes' if predicate else 'no'
+
+
+def is_even(question):
+    return question % 2 == 0
+
+
 def run():
     """Function defines conditions of the brain-even game."""
 
-    question = random.randint(1, 100)
-    correct_answer = 'no'
-    if question % 2 == 0:
-        correct_answer = 'yes'
+    question = get_question()
+    predicate = is_even(question)
+    correct_answer = get_correct_answer(predicate)
+
     return question, correct_answer
