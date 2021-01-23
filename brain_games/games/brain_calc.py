@@ -2,7 +2,7 @@ import random
 import operator
 
 
-TASK = 'What is the result of the expression?'
+DESCRIPTION = 'What is the result of the expression?'
 
 
 def run():
