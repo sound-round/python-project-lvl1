@@ -6,7 +6,7 @@
 
 <a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
 
-[![Github Actions Status](https://github.com/sound-round/python-project-lvl1/workflows/linter-flake8/badge.svg)](https://github.com/sound-round/python-project-lvl1/actions)
+[![Github Actions Status](https://github.com/sound-round/python-project-lvl1/workflows/linter/badge.svg)](https://github.com/sound-round/python-project-lvl1/actions)
 
 ## Description
 Brain Games — a set of five console games built on the principle of popular mobile applications for brain pumping.
