@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 
-"""main script"""
-
 from brain_games import cli
 
 
