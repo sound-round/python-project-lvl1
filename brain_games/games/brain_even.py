@@ -17,7 +17,7 @@ def is_even(question):
     return question % 2 == 0
 
 
-def run():
+def round():
     """Function defines conditions of the brain-even game."""
 
     question = get_question()

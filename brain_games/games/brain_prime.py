@@ -19,7 +19,7 @@ def is_prime(question):
     return divisor == question
 
 
-def run():
+def round():
     """Function defines conditions of the brain-prime game."""
 
     question = get_question()

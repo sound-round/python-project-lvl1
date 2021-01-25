@@ -21,7 +21,7 @@ def get_correct_answer(random_number_1, random_number_2, random_operator):
     return correct_answer
 
 
-def run():
+def round():
     """Function defines conditions of the brain-calc game."""
 
     [question, random_number_1, random_number_2,

@@ -4,7 +4,7 @@ import copy
 DESCRIPTION = 'What number is missing in the progression?'
 
 
-def run():
+def round():
     """Function defines conditions of the brain-progression game."""
 
     # defines the first number of a progression.

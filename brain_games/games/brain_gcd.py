@@ -21,7 +21,7 @@ def get_correct_answer(random_number_1, random_number_2):
     return str(random_number_1 + random_number_2)
 
 
-def run():
+def round():
     """Function defines conditions of the brain-gcd game."""
 
     question, random_number_1, random_number_2 = get_question()
