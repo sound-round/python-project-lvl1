@@ -1,6 +1,9 @@
 import prompt
 
 
+WINS_NUMBER = 3
+
+
 def run(game):
     """Function runs a game."""
 
@@ -8,7 +11,7 @@ def run(game):
     player_name = prompt.string('May I have your name? ')
     print('Hello, {}!'.format(player_name))
     print(game.DESCRIPTION)
-    for _ in range(0, 3):
+    for _ in range(WINS_NUMBER):
         question, correct_answer = game.run()
         print('Question: {}'.format(question))
         user_answer = prompt.string('Your answer: ')
