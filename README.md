@@ -39,15 +39,17 @@ Demo brain-prime on asciinema:
 [![asciicast](https://asciinema.org/a/6wH9phK3dADwnM6bO73CEbEMz.svg)](https://asciinema.org/a/6wH9phK3dADwnM6bO73CEbEMz)
 
 ## Install
-Use the following command to install Brain Games:
+Use the following commands to install Brain Games:
 ```
-pip install --user dist/*.whl
+make build
+make package-install
+make install
 ```
 
 ## Local testing
 Use the following command to test the package:
 ```
-poetry run flake8 brain_games
+make lint
 ```
 
 ## Commands
