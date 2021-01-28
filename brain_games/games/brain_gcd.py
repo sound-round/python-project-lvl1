@@ -6,7 +6,8 @@ DESCRIPTION = 'Find the greatest common divisor of given numbers.'
 
 def get_gcd(random_number_1, random_number_2):
     while random_number_2:
-        random_number_1, random_number_2 = random_number_2, random_number_1 % random_number_2
+        random_number_1, random_number_2 = random_number_2,\
+                                           random_number_1 % random_number_2
     return str(random_number_1)
 
 
