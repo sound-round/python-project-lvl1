@@ -2,6 +2,25 @@ import random
 import copy
 
 DESCRIPTION = 'What number is missing in the progression?'
+GAP = '..'
+
+
+def get_progression(first_number, step, length):
+    progression = [str(first_number + step * i) for i in range(length)]
+    return progression
+
+
+def get_correct_answer(progression, index_hidden_element):
+    copy_progression = copy.copy(progression)
+    correct_answer = copy_progression.pop(index_hidden_element)
+    return correct_answer
+
+
+def get_question(progression, index_hidden_element):
+    copy_progression = copy.copy(progression)
+    copy_progression[index_hidden_element] = GAP
+    question = ' '.join(copy_progression)
+    return question
 
 
 def round():
@@ -11,13 +30,13 @@ def round():
     first_number = random.randint(1, 20)
     # defines a step of a progression.
     step = random.randint(1, 5)
-    # progression = [str(first_number)]
     # defines length of a progression.
     length = random.randint(5, 10)
-    progression = [str(first_number + step * i) for i in range(0, length)]
+    progression = get_progression(first_number, step, length)
+
     index_hidden_element = random.randint(0, len(progression) - 1)
-    new_progression = copy.deepcopy(progression)
-    correct_answer = new_progression.pop(index_hidden_element)
-    new_progression.insert(index_hidden_element, '..')
-    question = ' '.join(new_progression)
+
+    question = get_question(progression, index_hidden_element)
+    correct_answer = get_correct_answer(progression, index_hidden_element)
+
     return question, correct_answer
