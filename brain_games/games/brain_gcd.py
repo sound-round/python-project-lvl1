@@ -5,17 +5,17 @@ MIN_NUMBER = 1
 MAX_NUMBER = 100
 
 
-def get_gcd(number_1, number_2):
-    if number_2 == 0:
-        return number_1
-    return get_gcd(number_2, number_1 % number_2)
+def get_gcd(first_number, second_number):
+    if second_number == 0:
+        return first_number
+    return get_gcd(second_number, first_number % second_number)
 
 
 def start_round():
     """Function defines conditions of the brain-gcd game."""
 
-    random_number_1 = random.randint(MIN_NUMBER, MAX_NUMBER)
-    random_number_2 = random.randint(MIN_NUMBER, MAX_NUMBER)
-    question = '{} {}'.format(random_number_1, random_number_2)
-    correct_answer = str(get_gcd(random_number_1, random_number_2))
+    first_random_number = random.randint(MIN_NUMBER, MAX_NUMBER)
+    second_random_number = random.randint(MIN_NUMBER, MAX_NUMBER)
+    question = '{} {}'.format(first_random_number, second_random_number)
+    correct_answer = str(get_gcd(first_random_number, second_random_number))
     return question, correct_answer
