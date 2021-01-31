@@ -8,6 +8,8 @@ MIN_LENGTH = 5
 MAX_LENGTH = 10
 MAX_STEP = 5
 MIN_STEP = 1
+MIN_NUMBER = 1
+MAX_NUMBER = 20
 
 
 def get_progression(start, step, length):
@@ -26,7 +28,7 @@ def start_round():
     """Function defines conditions of the brain-progression game."""
 
     # defines the first number of a progression.
-    start = random.randint(1, 20)
+    start = random.randint(MIN_NUMBER, MAX_NUMBER)
     # defines a step of a progression.
     step = random.randint(MIN_STEP, MAX_STEP)
     # defines length of a progression.
