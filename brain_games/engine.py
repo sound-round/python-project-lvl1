@@ -12,7 +12,7 @@ def run(game):
     print('Hello, {}!'.format(player_name))
     print(game.DESCRIPTION)
     for _ in range(ROUNDS_COUNT):
-        question, correct_answer = game.round()
+        question, correct_answer = game.start_round()
         print('Question: {}'.format(question))
         user_answer = prompt.string('Your answer: ')
 
