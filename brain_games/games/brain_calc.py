@@ -4,18 +4,18 @@ import operator
 DESCRIPTION = 'What is the result of the expression?'
 
 
-def get_question(random_number_1, random_number_2, random_sign):
-    question = '{} {} {}'.format(random_number_1,
-                                 random_sign, random_number_2)
+def get_question(number_1, number_2, sign):
+    question = '{} {} {}'.format(number_1,
+                                 sign, number_2)
     return question
 
 
-def get_correct_answer(random_number_1, random_number_2, random_operator):
-    correct_answer = str(random_operator(random_number_1, random_number_2))
+def get_correct_answer(number_1, number_2, operator):
+    correct_answer = str(operator(number_1, number_2))
     return correct_answer
 
 
-def round():
+def start_round():
     """Function defines conditions of the brain-calc game."""
 
     random_number_1 = random.randint(1, 100)
