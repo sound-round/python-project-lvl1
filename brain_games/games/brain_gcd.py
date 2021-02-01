@@ -11,7 +11,7 @@ def get_gcd(first_number, second_number):
     return get_gcd(second_number, first_number % second_number)
 
 
-def start_round():
+def generate_round():
     """Function defines conditions of the brain-gcd game."""
 
     first_random_number = random.randint(MIN_NUMBER, MAX_NUMBER)

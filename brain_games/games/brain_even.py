@@ -10,7 +10,7 @@ def is_even(number):
     return number % 2 == 0
 
 
-def start_round():
+def generate_round():
     """Function defines conditions of the brain-even game."""
 
     question = random.randint(MIN_NUMBER, MAX_NUMBER)

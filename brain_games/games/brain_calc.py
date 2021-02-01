@@ -16,7 +16,7 @@ def calculate_answer(first_number, second_number, operator):
     return MAP_OPERATOR_TO_OPERATION[operator](first_number, second_number)
 
 
-def start_round():
+def generate_round():
     """Function defines conditions of the brain-calc game."""
 
     first_random_number = random.randint(MIN_NUMBER, MAX_NUMBER)

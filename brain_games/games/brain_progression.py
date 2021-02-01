@@ -24,7 +24,7 @@ def get_question(progression, hidden_element_index):
     return question
 
 
-def start_round():
+def generate_round():
     """Function defines conditions of the brain-progression game."""
 
     # defines the first number of a progression.

@@ -13,7 +13,7 @@ def is_prime(number):
     return divisor == number
 
 
-def start_round():
+def generate_round():
     """Function defines conditions of the brain-prime game."""
 
     question = random.randint(MIN_NUMBER, MAX_NUMBER)
