@@ -1,43 +1,34 @@
 import random
-import copy
 
 
 DESCRIPTION = 'What number is missing in the progression?'
 GAP = '..'
 MIN_LENGTH = 5
 MAX_LENGTH = 10
-MAX_STEP = 5
-MIN_STEP = 1
-MIN_NUMBER = 1
-MAX_NUMBER = 20
 
 
 def get_progression(start, step, length):
-    progression = [str(start + step * i) for i in range(length)]
+    progression = [start + step * i for i in range(length)]
     return progression
 
 
-def get_question(progression, hidden_element_index):
-    copy_progression = copy.copy(progression)
-    copy_progression[hidden_element_index] = GAP
-    question = ' '.join(copy_progression)
+def get_question(progression, hidden_element_index, hiding_marker):
+    copied_progression = progression[:]
+    modified_progression = list(map(str, copied_progression))
+    modified_progression[hidden_element_index] = hiding_marker
+    question = ' '.join(modified_progression)
     return question
 
 
 def generate_round():
     """Function defines conditions of the brain-progression game."""
-
-    # defines the first number of a progression.
-    start = random.randint(MIN_NUMBER, MAX_NUMBER)
-    # defines a step of a progression.
-    step = random.randint(MIN_STEP, MAX_STEP)
-    # defines length of a progression.
-    length = random.randint(MIN_LENGTH, MAX_LENGTH)
-    progression = get_progression(start, step, length)
-
+    progression_start = random.randint(1, 20)
+    progression_step = random.randint(1, 5)
+    progression_length = random.randint(MIN_LENGTH, MAX_LENGTH)
+    progression = get_progression(progression_start,
+                                  progression_step,
+                                  progression_length)
     hidden_element_index = random.randint(0, len(progression) - 1)
-
-    question = get_question(progression, hidden_element_index)
-    correct_answer = progression[hidden_element_index]
-
+    question = get_question(progression, hidden_element_index, GAP)
+    correct_answer = str(progression[hidden_element_index])
     return question, correct_answer
