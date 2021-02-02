@@ -13,8 +13,7 @@ def get_progression(start, step, length):
 
 
 def get_question(progression, hidden_element_index, hiding_marker):
-    copied_progression = progression[:]
-    modified_progression = list(map(str, copied_progression))
+    modified_progression = list(map(str, progression))
     modified_progression[hidden_element_index] = hiding_marker
     question = ' '.join(modified_progression)
     return question
