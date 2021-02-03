@@ -21,6 +21,7 @@ def get_question(progression, hidden_element_index, hiding_marker):
 
 def generate_round():
     """Function defines conditions of the brain-progression game."""
+
     progression_start = random.randint(1, 20)
     progression_step = random.randint(1, 5)
     progression_length = random.randint(MIN_LENGTH, MAX_LENGTH)
