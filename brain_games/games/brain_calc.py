@@ -3,7 +3,6 @@ import operator
 
 
 DESCRIPTION = 'What is the result of the expression?'
-OPERATORS = ['+', '-', '*']
 map_operator_to_operation = {
     '+': operator.add,
     '-': operator.sub,
@@ -20,7 +19,7 @@ def generate_round():
 
     first_random_number = random.randint(1, 100)
     second_random_number = random.randint(1, 100)
-    random_operator = random.choice(OPERATORS)
+    random_operator = random.choice(list(map_operator_to_operation.keys()))
     question = '{} {} {}'.format(first_random_number,
                                  random_operator, second_random_number)
     correct_answer = str(calculate(first_random_number,
